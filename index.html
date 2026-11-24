@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -44,43 +45,184 @@
       </section>
 
 <section>
-        <div>
+    <div>
+      <div>
+        <h1>Portfolio</h1>
+        <h2>Selected Work</h2>
+        <p>
+          A tightly curated selection of recent sessions. Only the images
+          that represent the work we want to create next.
+        </p>
+      </div>
+      <div>
+        <button data-filter="all">All</button>
+        <button data-filter="family">Family</button>
+        <button data-filter="couples">Couples</button>
+        <button data-filter="branding">Branding</button>
+      </div>
+      <div>
+        <article>
           <div>
-            <h1>Portfolio</h1>
-            <h2>Selected Work</h2>
+            <p>Family</p>
+            <img src="images/family1.jpg" alt="familyphoto", width="180" height="250"/>
+            <img src="images/family2.jpg" alt="familyphoto", width="190" height="250"/>
+            <img src="images/family3.jpg" alt="familyphoto", width="190" height="250"/>
+          </div>
+        </article>
+        <article>
+          <div>
+            <p>Couples</p>
+            <img src="images/couple1.jpg" alt="couplephoto", width="190" height="250"/>
+            <img src="images/couple2.jpg" alt="couplephoto", width="190" height="250"/>
+            <img src="images/couple3.jpg" alt="couplephoto", width="190" height="250"/>
+            <img src="images/couple4.jpg" alt="couplephoto", width="190" height="250"/>
+          </div>
+        </article>
+          <article>
+            <p style="font-size: 30px;"><strong>Branding</strong></p>
+            <img src="images/kinghenry1.jpg" alt="hounds", width="200" height="200"/>
+            <img src="images/royce.jpg" alt="royce", width="295" height="250"/>
+            <img src="images/kinghenry2.jpg" alt="hounds", width="290" height="250"/>
+        </article>
+        </div>
+      </section>
+    <section class="section about" id="about">
+          <div class="about-content">
+            <span class="section-label">About</span>
+            <h2>Less noise. More intention.</h2>`
             <p>
-              A tightly curated selection of recent sessions. Only the images
-              that represent the work we want to create next.
+              AresLens exists for people who prefer calm, honest photographs over highly styled productions. Sessions are unhurried, directed with a light touch, and focused on natural light and real connection.
             </p>
+            <p>
+              Whether you are documenting a growing family, celebrating a relationship, or building a personal brand, the goal is the same: images that feel like you—clear, quiet, and lasting.
+            </p>
+            <a href="#contact" class="btn btn-primary">Inquire Now!</a>
           </div>
+        </div>
+      </section>
+      <section class="section services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Services</span>
+          <h2>What We Offer</h2>
+          <p>Transparent starting investments and clear packages so you can decide with confidence.</p>
+        </div>
 
-          <div>
-            <button data-filter="all">All</button>
-            <button data-filter="family">Family</button>
-            <button data-filter="couples">Couples</button>
-            <button data-filter="branding">Branding</button>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Family & Maternity</h3>
+            <p>
+              Relaxed lifestyle sessions for growing families. Outdoor or in-home, natural light only. Digital gallery with high-resolution files.
+            </p>
+            <p class="service-price">Starting at ₱15,000</p>
+          </article>
+          <article class="service-card">
+            <h3>Couples & Engagement</h3>
+            <p>
+              Quiet, story-driven sessions for couples. Locations chosen for soft light and space. Full digital delivery included.
+            </p>
+            <p class="service-price">Starting at ₱12,000</p>
+          </article>
+          <article class="service-card">
+            <h3>Personal Branding</h3>
+            <p>
+              Clean headshots and lifestyle branding imagery for entrepreneurs, coaches, and creatives. Built for websites and social use.
+            </p>
+            <p class="service-price">Starting at ₱18,000</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Kind Words</span>
+          <h2>From Recent Clients</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <blockquote>
+              “The session felt calm from the moment we started. The photos look like us—no forced poses, just real moments in beautiful light. We keep coming back to the gallery.”
+            </blockquote>
+            <div class="testimonial-name">
+              <strong>Maya & Jordan</strong>
+              Family Session
+            </div>
+          </article>
+          <article class="testimonial-card">
+            <blockquote>
+              “Exactly the clean, professional look I needed for my site and LinkedIn. The process was simple and the results feel elevated without being overdone.”
+            </blockquote>
+            <div class="testimonial-name">
+              <strong>Elena R.</strong>
+              Personal Branding
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="section-label">Contact</span>
+        <h2>Let’s talk about your session</h2>
+        <p>
+          Share a few details about what you’re looking for. You’ll receive a reply within 1–2 business days with availability and next steps.
+        </p>
+        <div class="contact-details">
+          <p>hello@areslens.com</p>
+          <p>Based in the Pacific Northwest</p>
+        </div>
+      </div>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" />
           </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com" />
+          </div>
+        </div>
 
-          <div>
-            <article>
-              <div>
-                <p>Family</p>
-                <img src="images/family1.jpg" alt="familyphoto", width="180" height="250"/>
-                <img src="images/family2.jpg" alt="familyphoto", width="190" height="250"/>
-                <img src="images/family3.jpg" alt="familyphoto", width="190" height="250"/>
-              </div>
-            </article>
-            <article>
-              <div>
-                <p>Couples</p>
-                <img src="images/couple1.jpg" alt="couplephoto", width="190" height="250"/>
-                <img src="images/couple2.jpg" alt="couplephoto", width="190" height="250"/>
-                <img src="images/couple3.jpg" alt="couplephoto", width="190" height="250"/>
-                <img src="images/couple4.jpg" alt="couplephoto", width="190" height="250"/>
-              </div>
-            </article>
-            <article>
-                <p>Branding</p>
-                <img src=""
-            </article>
-           
+        <div class="form-group">
+          <label for="session">Session Type</label>
+          <select id="session" name="session" required>
+            <option value="" disabled selected>Select a session</option>
+            <option value="family">Family / Maternity</option>
+            <option value="couples">Couples / Engagement</option>
+            <option value="branding">Personal Branding</option>
+            <option value="other">Other / Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me a little about what you have in mind, preferred dates, or any questions..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Inquiry</button>
+      </form>
+    </div>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">Ares<span>Lens</span></div>
+    <div class="footer-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 AresLens: Photography Services. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>      
