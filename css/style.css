@@ -216,10 +216,6 @@ main > section:first-of-type > div {
 }
 
 /* Logo image in hero */
-main > section:first-of-type img {
-  border-radius: 2px;
-  object-fit: contain;
-}
 
 main > section:first-of-type h1 {
   margin-bottom: 1.1rem;
