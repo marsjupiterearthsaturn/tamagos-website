@@ -1,206 +1,155 @@
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  --coffee: #4A3728;
-  --coffee-light: #6B5344;
-  --coffee-dark: #3A2B1F;
-  --white: #FFFFFF;
-  --off-white: #FAF9F7;
-  --black: #111111;
-  --charcoal: #1A1A1A;
-  --gray: #6B6B6B;
-  --light-gray: #E8E6E3;
+    --coffee: #4A3728;
+    --coffee-light: #6B5344;
+    --coffee-dark: #3A2B1F;
+    --white: #FFFFFF;
+    --off-white: #FAF9F7;
+    --black: #111111;
+    --charcoal: #1A1A1A;
+    --gray: #6B6B6B;
+    --light-gray: #E8E6E3;
 
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --max-width: 1200px;
-  --header-height: 72px;
-  --transition: 0.25s ease;;
+    --font-sans: Arial, sans-serif;
+    --transition: 0.25s ease;
 }
 
+/* HEADER */
+
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  border-radius: 2px;
-  background-color: rgba(250, 249, 247, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--light-gray);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: rgba(250, 249, 247, 0.94);
+    border-bottom: 1px solid var(--light-gray);
 }
 
 header > div {
-  margin-inline: 40px;
-  padding: 0 1.5rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  margin-bottom: 1.75rem;
-  gap: 1.75rem;
+    margin: 0 40px;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.75rem;
 }
 
-header > div > a {
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  text-decoration-line: none;
-}
-
-header > div > a{
-  color: var(--charcoal);
-  transition: color var(--transition);
-}
-
-header > div > a:hover{
-  color: var(--coffee);
-}
-
-main > section:first-of-type img {
-  border-radius: 2px;
-  object-fit: contain;
-}
+/* LOGO */
 
 header > div > p {
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--black);
-  margin-left: -3.5%;
-  margin-bottom: -2%;
-  margin-top: -2%;
-  font-family: var(--font-sans);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--black);
+    font-family: var(--font-sans);
+    margin-right: auto;
 }
 
 header > div > p span {
-  color: var(--coffee);
-  font-weight: 400;
+    color: var(--coffee);
+    font-weight: 400;
 }
 
+/* NAVIGATION LINKS */
 
-main > section > header{
-    display: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+header > div > a {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--charcoal);
+    transition: color var(--transition);
 }
 
-
-main > section:first-child button:hover {
-  color: var(--coffee);
-  border-bottom-color: var(--coffee);
+header > div > a:hover {
+    color: var(--coffee);
 }
 
-main > section:first-child article {
-  margin-bottom: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-main > section:first-child article p,
-main > section:first-child article p strong {
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--coffee);
-  margin-bottom: 1rem;
-  display: block;
-}
-
-main > section:first-child article div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-main > section:first-child article img {
-  object-fit: cover;
-  background-color: var(--light-gray);
-  transition: transform 0.4s ease, opacity 0.3s ease;
-}
-
-main > section:nth-of-type(2) article img:hover {
-  transform: scale(1.03);
-  opacity: 0.92;
-}
-
-section > .services-grid{
-  margin-top: 10%;
-}
+/* PORTFOLIO CARDS */
 
 .services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  padding-left: 20;
-  padding-right: 20;
-  gap: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 40px;
+    gap: 1.75rem;
+    margin-top: 150px;
 }
 
 .service-card {
-  padding: 3.00rem 1.75rem;
-  border: 1px solid var(--light-gray);
-  background-color: var(--off-white);
-  transition: border-color var(--transition);
+    padding: 3rem 1.75rem;
+    border: 1px solid var(--light-gray);
+    background-color: var(--off-white);
+    transition: border-color var(--transition);
 }
 
+.service-card:hover {
+    border-color: var(--coffee);
+}
 
 .service-card h3 {
-  margin-bottom: 0.7rem;
-  color: var(--black);
+    margin-bottom: 0.7rem;
+    color: var(--black);
+    font-family: var(--font-sans);
 }
 
 .service-card p {
-  font-size: 0.95rem;
-  margin-bottom: 1.4rem;
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-bottom: 1.4rem;
+    line-height: 1.5;
 }
 
-.service-price {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--coffee);
-  letter-spacing: 0.02em;
-  margin-bottom: 0 !important;
-  cursor: pointer;
-}
+/* VIEW BUTTON */
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.70rem 1.7rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+    display: inline-block;
+    padding: 0.70rem 1.7rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color var(--transition);
 }
 
 .btn-transfer {
-  background-color: var(--coffee);
-  color: var(--white);
-  margin-left: -3%;
-  margin-bottom: 2%;
-  border: 1.1px solid var(--charcoal);
-  cursor: pointer;
-  text-decoration-line: none;
+    background-color: var(--coffee);
+    color: var(--white);
+    border: 1px solid var(--charcoal);
 }
 
-.btn-transfer:hover{
-  background-color: var(--coffee-dark);
+.btn-transfer:hover {
+    background-color: var(--coffee-dark);
+}
+
+/* GALLERY */
+
+.gallery {
+    margin-top: 110px;
+    padding: 20px 40px;
+}
+
+.gallery p {
+    font-size: 1.3rem;
+    font-family: var(--font-sans);
+    color: var(--coffee);
+    margin-bottom: 1.5rem;
+}
+
+.gallery img {
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    opacity: 0.92;
 }
